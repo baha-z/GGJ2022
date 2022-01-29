@@ -35,6 +35,18 @@ public class Spawner : MonoBehaviour
 
         position.x = position.x + randomX;
         position.y = position.y + randomY;
+        
+        Camera camera = Camera.main;
+        float halfHeight = camera.orthographicSize;
+        float halfWidth = camera.aspect * halfHeight;
+
+        if(position.x >= halfWidth){
+            position.x = halfWidth - 1f;
+        }
+
+        if(position.y >= halfHeight){
+            position.y = halfHeight - 1f;
+        }
 
         if(isSanityPotion){
             Instantiate(sanityPotion, position, Quaternion.identity);
