@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    // Game objects to generate
     public GameObject sanityPotion;
     public GameObject crazyPotion;
-    float tiempo;
-    public float intervalo;
+    // Time controller
+    float time;
+    // Interval between every generation on seconds
+    public float interval;
+    // Range of dispersion between object on units
     public float range;
 
     // Update is called once per frame
     void Update()
     {
-        tiempo += Time.deltaTime;
+        time += Time.deltaTime;
 
-        if(tiempo >= intervalo) {
+        if(time >= interval) {
             generate();
-            tiempo = 0;
+            time = 0;
         }
         
     }
 
+    // Method to generate random object arround father position 
     void generate() {
         float randomX = Random.Range(-range, range);
         float randomY = Random.Range(-range, range);
