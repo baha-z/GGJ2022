@@ -9,6 +9,8 @@ public class PlayerScore : MonoBehaviour
     public Text higScoreText;
     public Text poinstText;
     public int life = 4;
+    public GameObject Doctor;
+    private int scoreMark = 0;
 
     int score ;
 
@@ -16,7 +18,6 @@ public class PlayerScore : MonoBehaviour
     {
         scoreText.text = score.ToString() + "points";
         higScoreText.text = "total" + higScoreText.ToString();
-
     }
     void Awake()
     {
@@ -37,19 +38,37 @@ public class PlayerScore : MonoBehaviour
         if (PlayerPrefs.GetInt("higscore", score) < score)
         {
             PlayerPrefs.SetInt("higscore", score);
-
         }
     }
 
     public void LoseLife()
     {
         life--;
+        UpdateScoreMark();
+
         Debug.Log("losing a life!" + life);
 
-        if (life <= 0)
+        if (life < 1)
         {
             PlayerPrefs.SetInt("score", score);
             SceneManager.LoadScene("GameOver");
+
+        } else if (life < 3)
+        {
+            Doctor.GetComponent<DoctorMovement>().TransformAdvance();
+        }
+    }
+
+    public void RecoverLife()
+    {
+        if ((score - scoreMark) >= 20)
+        {
+            
+            if (life < 4) life++;
+
+            UpdateScoreMark();
+
+            if (life > 0) Doctor.GetComponent<DoctorMovement>().TransformRegression();
         }
     }
 
@@ -71,6 +90,13 @@ public class PlayerScore : MonoBehaviour
             //sum score
             poinstText.color = Color.yellow;
             poinstText.text = "+" + points.ToString() + "pts";
+
+            RecoverLife();
         }
+    }
+
+    private void UpdateScoreMark()
+    {
+        scoreMark = score;
     }
 }
