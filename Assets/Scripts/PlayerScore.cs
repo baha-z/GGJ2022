@@ -6,8 +6,10 @@ public class PlayerScore : MonoBehaviour
     public static PlayerScore instance;
     public Text scoreText;
     public Text higScoreText;
+    public Text poinstText;
 
-    int score = 0;
+
+    int score ;
 
     private void Start()
     {
@@ -27,13 +29,34 @@ public class PlayerScore : MonoBehaviour
 
     public void AddPoints(int points)
     {
-        Debug.Log(score);
+        Debug.Log("addPoints: " + points);
         score = score + points;
+
+        showScore(points);
         if (PlayerPrefs.GetInt("higscore", score) < score)
         {
             PlayerPrefs.SetInt("higscore", score);
 
         }
-        Debug.Log("Score: " + score);
+
+    }
+    public void showScore(int points)
+    {
+   
+        if (points < 1)
+        {
+            Debug.Log("isPoison");
+            //lose life 
+            poinstText.color = Color.red;
+            poinstText.text = "ouch";
+
+        }
+        else
+        {
+            Debug.Log("no poison");
+            //sum score
+            poinstText.color = Color.yellow;
+            poinstText.text = "+" + points.ToString() + "pts";
+        }
     }
 }
