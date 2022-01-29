@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd3fd7ce29bc9b47a8daa38fef3658d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanityPotion: {fileID: 6653310822869403624, guid: e351bedcdae21014eab52b52f6a3b03e, type: 3}
-  crazyPotion: {fileID: 6653310822869403624, guid: e351bedcdae21014eab52b52f6a3b03e, type: 3}
-  intervalo: 3
-  range: 4
+  sanityPotion: {fileID: 6939938587692410453, guid: 035ff230367775e44a368118c7740790, type: 3}
+  crazyPotion: {fileID: 2335059844689782089, guid: 58ce79c51f7f0cd40b0e54347e3c035d, type: 3}
+  interval: 1
+  range: 100

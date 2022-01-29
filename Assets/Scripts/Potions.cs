@@ -29,6 +29,7 @@ public class Potions : MonoBehaviour
 
         if (isPoison)
         {
+            Debug.Log("isPoison");
             //lose life 
             textfield.color = Color.red;
             textfield.text = "ouch";
@@ -36,6 +37,7 @@ public class Potions : MonoBehaviour
         }
         else
         {
+            Debug.Log("no poison");
             //sum score
             textfield.color = Color.yellow;
             textfield.text = "+" + points.ToString() + "pts";
@@ -47,7 +49,9 @@ public class Potions : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         textfield.text = "";
+        PlayerScore.instance.AddPoints(points);
         Destroy(gameObject);
+
     }
 
 }

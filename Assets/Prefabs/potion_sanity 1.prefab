@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2939224188783214814
+--- !u!1 &7860347813466765645
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3763413955883411766}
-  - component: {fileID: 589924755259284123}
-  - component: {fileID: 8999265697957809003}
-  - component: {fileID: 2905034561644651161}
-  - component: {fileID: 5694367230899825526}
-  - component: {fileID: 8402615242176755127}
+  - component: {fileID: 8207244548467921061}
+  - component: {fileID: 5616126256130876168}
+  - component: {fileID: 4124303418963440376}
+  - component: {fileID: 7894645124004797194}
+  - component: {fileID: 781898662647436005}
+  - component: {fileID: 3549890286277020708}
   m_Layer: 0
-  m_Name: potion_sanity
+  m_Name: potion_sanity 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3763413955883411766
+--- !u!224 &8207244548467921061
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939224188783214814}
+  m_GameObject: {fileID: 7860347813466765645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 79.91821, y: 79.91821, z: 79.91821}
@@ -40,13 +40,13 @@ RectTransform:
   m_AnchoredPosition: {x: 1681, y: 711}
   m_SizeDelta: {x: 5.12, y: 5.12}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &589924755259284123
+--- !u!212 &5616126256130876168
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939224188783214814}
+  m_GameObject: {fileID: 7860347813466765645}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -91,13 +91,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8999265697957809003
+--- !u!58 &4124303418963440376
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939224188783214814}
+  m_GameObject: {fileID: 7860347813466765645}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -107,13 +107,13 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
---- !u!114 &2905034561644651161
+--- !u!114 &7894645124004797194
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939224188783214814}
+  m_GameObject: {fileID: 7860347813466765645}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e7119a44800ebe47af8b0b7238595ee, type: 3}
@@ -122,22 +122,22 @@ MonoBehaviour:
   time: 5
   points: 10
   isPoison: 0
-  textfield: {fileID: 0}
---- !u!222 &5694367230899825526
+  textfield: {fileID: 3549890286277020708}
+--- !u!222 &781898662647436005
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939224188783214814}
+  m_GameObject: {fileID: 7860347813466765645}
   m_CullTransparentMesh: 1
---- !u!114 &8402615242176755127
+--- !u!114 &3549890286277020708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939224188783214814}
+  m_GameObject: {fileID: 7860347813466765645}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -153,11 +153,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
