@@ -26,8 +26,6 @@ public class Potions : MonoBehaviour
         var rend = GetComponent<Renderer>();
         rend.enabled = false;
         StartCoroutine(myWaitCoroutine());
-
-      
     }
 
     IEnumerator myWaitCoroutine()

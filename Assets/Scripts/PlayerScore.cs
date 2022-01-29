@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
+ 
 public class PlayerScore : MonoBehaviour
 {
     public static PlayerScore instance;
     public Text scoreText;
     public Text higScoreText;
     public Text poinstText;
-
+    public int life = 4;
 
     int score ;
 
@@ -38,8 +39,20 @@ public class PlayerScore : MonoBehaviour
             PlayerPrefs.SetInt("higscore", score);
 
         }
-
     }
+
+    public void LoseLife()
+    {
+        life--;
+        Debug.Log("losing a life!" + life);
+
+        if (life <= 0)
+        {
+            PlayerPrefs.SetInt("score", score);
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+
     public void showScore(int points)
     {
    
@@ -49,6 +62,7 @@ public class PlayerScore : MonoBehaviour
             //lose life 
             poinstText.color = Color.red;
             poinstText.text = "ouch";
+            LoseLife();
 
         }
         else
