@@ -167,6 +167,7 @@ MonoBehaviour:
   higScoreText: {fileID: 1119928667}
   poinstText: {fileID: 1292046262}
   life: 4
+  Doctor: {fileID: 822176139}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -332,6 +333,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &822176139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3400686364932696470, guid: fc7823863cf81b44c879edd5f7862075, type: 3}
+  m_PrefabInstance: {fileID: 968526654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &968526654
 PrefabInstance:
   m_ObjectHideFlags: 0
