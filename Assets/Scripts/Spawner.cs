@@ -15,6 +15,8 @@ public class Spawner : MonoBehaviour
     public float range;
     // Items random to create
     public float creationRange = 1;
+    // GameObject to avoid
+    public string playerObjectName = "Doctor";
 
     // Update is called once per frame
     void Update()
@@ -41,7 +43,7 @@ public class Spawner : MonoBehaviour
         position.y = position.y + randomY;
 
         // Doctor sprite reference position
-        GameObject doctor = GameObject.Find("Doctor");
+        GameObject doctor = GameObject.Find(playerObjectName);
         Collider2D doctorCollider = doctor.GetComponent<Collider2D>();
         float doctorX = doctorCollider.bounds.extents.x;
         float doctorY = doctorCollider.bounds.extents.y;
