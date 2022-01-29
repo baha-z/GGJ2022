@@ -46,4 +46,6 @@ MonoBehaviour:
   sanityPotion: {fileID: 6939938587692410453, guid: 035ff230367775e44a368118c7740790, type: 3}
   crazyPotion: {fileID: 2335059844689782089, guid: 58ce79c51f7f0cd40b0e54347e3c035d, type: 3}
   interval: 1
-  range: 100
+  range: 500
+  border: 100
+  creationRange: 4
