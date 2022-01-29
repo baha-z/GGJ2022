@@ -9,27 +9,45 @@ public class Potions : MonoBehaviour
 
     public int time;
     public int points;
+    public bool isPoison;
     public Text textfield;
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
         Lifespan();
     }
 
     private void Lifespan()
     {
-        // Kills the game object in 5 seconds after loading the object
         Destroy(gameObject,time);
     }
-
 
     void OnMouseDown()
     {
         var rend = GetComponent<Renderer>();
         rend.enabled = false;
-        Destroy(gameObject, 0.5f);
 
-        textfield.text = "+" + points.ToString() + "pts";
+        if (isPoison)
+        {
+            //lose life 
+            textfield.color = Color.red;
+            textfield.text = "ouch";
+            StartCoroutine(myWaitCoroutine());
+        }
+        else
+        {
+            //sum score
+            textfield.color = Color.yellow;
+            textfield.text = "+" + points.ToString() + "pts";
+            StartCoroutine(myWaitCoroutine());
+        }
     }
+
+    IEnumerator myWaitCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        textfield.text = "";
+        Destroy(gameObject);
+    }
+
 }
