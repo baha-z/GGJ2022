@@ -11,8 +11,9 @@ public class Potions : MonoBehaviour
     public int points;
     public bool isPoison;
     public AudioSource audioSource;
-    public AudioClip clip;
+    public AudioClip[] clips;
     public float volume = 0.5f;
+    private int index;
 
     void Start()
     {
@@ -28,7 +29,8 @@ public class Potions : MonoBehaviour
     {
         var rend = GetComponent<Renderer>();
         rend.enabled = false;
-        audioSource.PlayOneShot(clip, volume);
+        index = Random.Range(0, clips.Length);
+        audioSource.PlayOneShot(clips[index], volume);
         StartCoroutine(myWaitCoroutine());
     }
 
