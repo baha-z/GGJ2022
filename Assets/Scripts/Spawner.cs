@@ -74,11 +74,9 @@ public class Spawner : MonoBehaviour
         }
 
         // Type of potion handler
-        Debug.Log("hola", Potions[2]);
         GameObject potion = Potions[Random.Range(0, Potions.Length-1)];
-        Debug.Log("hola", potion);
 
-     //   Instantiate(potion, position, Quaternion.identity);
+        Instantiate(potion, position, Quaternion.identity);
 
     }
 }

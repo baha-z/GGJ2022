@@ -445,6 +445,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
       propertyPath: crazyPotion
       value: 
       objectReference: {fileID: 6406563233638299365, guid: 58ce79c51f7f0cd40b0e54347e3c035d, type: 3}
@@ -480,7 +484,8 @@ PrefabInstance:
       propertyPath: Potions.Array.data[3]
       value: 
       objectReference: {fileID: 6406563233638299365, guid: 58ce79c51f7f0cd40b0e54347e3c035d, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 830275823490746216, guid: e379d209bf1990c418797ee25bad720a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e379d209bf1990c418797ee25bad720a, type: 3}
 --- !u!1 &1676994527
 GameObject:
