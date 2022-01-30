@@ -6,18 +6,18 @@ public class PlayerScore : MonoBehaviour
 {
     public static PlayerScore instance;
     public Text scoreText;
-    public Text higScoreText;
     public Text poinstText;
     public int life = 4;
     public GameObject Doctor;
     private int scoreMark = 0;
 
     int score ;
+    int highScore;
 
     private void Start()
     {
+        highScore = PlayerPrefs.GetInt("highScore");
         scoreText.text = score.ToString() + "points";
-        higScoreText.text = "total" + higScoreText.ToString();
     }
     void Awake()
     {
@@ -26,19 +26,13 @@ public class PlayerScore : MonoBehaviour
     private void Update()
     {
         scoreText.text = score.ToString() + "points";
-        higScoreText.text = "total" + higScoreText.ToString();
     }
 
     public void AddPoints(int points)
     {
-        Debug.Log("addPoints: " + points);
         score = score + points;
-
         showScore(points);
-        if (PlayerPrefs.GetInt("higscore", score) < score)
-        {
-            PlayerPrefs.SetInt("higscore", score);
-        }
+       
     }
 
     public void LoseLife()
@@ -51,6 +45,7 @@ public class PlayerScore : MonoBehaviour
         if (life < 1)
         {
             PlayerPrefs.SetInt("score", score);
+            saveHighScore();
             SceneManager.LoadScene("GameOver");
 
         } else if (life < 3)
@@ -77,7 +72,6 @@ public class PlayerScore : MonoBehaviour
    
         if (points < 1)
         {
-            Debug.Log("isPoison");
             //lose life 
             poinstText.color = Color.red;
             poinstText.text = "ouch";
@@ -86,7 +80,6 @@ public class PlayerScore : MonoBehaviour
         }
         else
         {
-            Debug.Log("no poison");
             //sum score
             poinstText.color = Color.yellow;
             poinstText.text = "+" + points.ToString() + "pts";
@@ -98,5 +91,15 @@ public class PlayerScore : MonoBehaviour
     private void UpdateScoreMark()
     {
         scoreMark = score;
+    }
+    private void saveHighScore()
+    {
+        Debug.Log("saveHighScore:  " + score);
+
+        if (highScore < score)
+        {
+            Debug.Log("new highScore:  " + score);
+            PlayerPrefs.SetInt("highScore", score);
+        }
     }
 }

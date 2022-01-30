@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class EndGame : MonoBehaviour
 {
 
-    //public Text higScoreText;
+    public Text higScoreText;
     public Text scoreText;
 
     private void Start()
     {
-        //higScoreText.text = "highscore: " + PlayerPrefs.GetInt("highscore").ToString();
+        higScoreText.text = "highscore: " + PlayerPrefs.GetInt("highScore").ToString();
         scoreText.text = "score: " + PlayerPrefs.GetString("score").ToString();
         Debug.Log(scoreText.text);
     }
