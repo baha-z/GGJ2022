@@ -33,8 +33,8 @@ public class LevelController : MonoBehaviour
         // Innitialize generator potions
         GameObject generator = GameObject.Find(generatorName);
         spawner = generator.GetComponent<Spawner>();
-        sanityScript = spawner.sanityPotion.GetComponent<Potions>();
-        crazyScript = spawner.crazyPotion.GetComponent<Potions>();
+        sanityScript = spawner.Potions[0].GetComponent<Potions>();
+        crazyScript = spawner.Potions[0].GetComponent<Potions>();
 
         // Innitialize launcher 
         GameObject launcher = GameObject.Find(launcherName);
