@@ -471,19 +471,19 @@ PrefabInstance:
     - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
       propertyPath: Potions.Array.data[0]
       value: 
-      objectReference: {fileID: 545598087355009311, guid: c462ace0cc6947c4db93b91863627da2, type: 3}
+      objectReference: {fileID: 2939224188783214814, guid: 035ff230367775e44a368118c7740790, type: 3}
     - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
       propertyPath: Potions.Array.data[1]
       value: 
-      objectReference: {fileID: 2939224188783214814, guid: 035ff230367775e44a368118c7740790, type: 3}
+      objectReference: {fileID: 6406563233638299365, guid: 58ce79c51f7f0cd40b0e54347e3c035d, type: 3}
     - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
       propertyPath: Potions.Array.data[2]
       value: 
-      objectReference: {fileID: 7498178426267194737, guid: 1345715fcce15d24080fb339f44e644f, type: 3}
+      objectReference: {fileID: 545598087355009311, guid: c462ace0cc6947c4db93b91863627da2, type: 3}
     - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
       propertyPath: Potions.Array.data[3]
       value: 
-      objectReference: {fileID: 6406563233638299365, guid: 58ce79c51f7f0cd40b0e54347e3c035d, type: 3}
+      objectReference: {fileID: 7498178426267194737, guid: 1345715fcce15d24080fb339f44e644f, type: 3}
     m_RemovedComponents:
     - {fileID: 830275823490746216, guid: e379d209bf1990c418797ee25bad720a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e379d209bf1990c418797ee25bad720a, type: 3}
