@@ -12,7 +12,7 @@ public class Launcher : MonoBehaviour
     // Interval between every generation on seconds
     public float interval;
     // Value to generate force
-    float force = 30000f;
+    public float force = 30000f;
 
     void Start () {
         Rigidbody2D potionRb2d = sanityPotion.GetComponent<Rigidbody2D>();
