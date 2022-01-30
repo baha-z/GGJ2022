@@ -10,6 +10,11 @@ public class PlayerScore : MonoBehaviour
     public int life = 4;
     public GameObject Doctor;
     private int scoreMark = 0;
+    private int PointsToRecoverLife = 20;
+
+    // Text timing
+    private float TextTimer = 1f;
+    private float DissapearingTime;
 
     int score ;
     int highScore;
@@ -26,6 +31,8 @@ public class PlayerScore : MonoBehaviour
     private void Update()
     {
         scoreText.text = score.ToString() + "points";
+
+        if (Time.time > DissapearingTime) poinstText.text = "";
     }
 
     public void AddPoints(int points)
@@ -56,7 +63,7 @@ public class PlayerScore : MonoBehaviour
 
     public void RecoverLife()
     {
-        if ((score - scoreMark) >= 20)
+        if ((score - scoreMark) >= PointsToRecoverLife)
         {
             
             if (life < 4) life++;
@@ -86,12 +93,14 @@ public class PlayerScore : MonoBehaviour
 
             RecoverLife();
         }
+        DissapearingTime = Time.time + TextTimer;
     }
 
     private void UpdateScoreMark()
     {
         scoreMark = score;
     }
+
     private void saveHighScore()
     {
         Debug.Log("saveHighScore:  " + score);
