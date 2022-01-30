@@ -240,19 +240,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Normal
-    clip: {fileID: 8300000, guid: f768841c6e18d064383b5e577769ca0f, type: 3}
+    clip: {fileID: 8300000, guid: 33ccee21e308a4d4c817e1354ee839db, type: 3}
     volume: 0
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Muting
-    clip: {fileID: 8300000, guid: 916b5079118e4ff4fa3dbe8aaad25c64, type: 3}
+    clip: {fileID: 8300000, guid: e582e38fd26916e48a4be6df75ff1e7f, type: 3}
     volume: 0
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Monster
-    clip: {fileID: 8300000, guid: 2b2bf1ffc9ddcee4ebed8c8cc39d2349, type: 3}
+    clip: {fileID: 8300000, guid: ac744068d8c9d9b4c8625e7bafbdd57d, type: 3}
     volume: 0
     pitch: 1
     loop: 1

@@ -13,8 +13,6 @@ public class AudioController : MonoBehaviour
 
     void Awake()
     {
-       
-
         foreach (Sound sound in sounds)
         {
             sound.source = gameObject.AddComponent<AudioSource>();
@@ -33,7 +31,6 @@ public class AudioController : MonoBehaviour
         if (AudioController.instance == null) instance = this;
         else
         {
-            Debug.Log("delete");
             Destroy(instance);
             return;
         }
@@ -51,8 +48,7 @@ public class AudioController : MonoBehaviour
         Sound snd = Array.Find(sounds, sound => sound.name == name);
         Sound[] dsbl = Array.FindAll(sounds, sound => 
             sound.name != name
-          );
-        Debug.Log(dsbl); 
+        );
 
         try
         {
