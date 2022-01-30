@@ -460,6 +460,26 @@ PrefabInstance:
       propertyPath: creationRange
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
+      propertyPath: Potions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
+      propertyPath: Potions.Array.data[0]
+      value: 
+      objectReference: {fileID: 545598087355009311, guid: c462ace0cc6947c4db93b91863627da2, type: 3}
+    - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
+      propertyPath: Potions.Array.data[1]
+      value: 
+      objectReference: {fileID: 2939224188783214814, guid: 035ff230367775e44a368118c7740790, type: 3}
+    - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
+      propertyPath: Potions.Array.data[2]
+      value: 
+      objectReference: {fileID: 7498178426267194737, guid: 1345715fcce15d24080fb339f44e644f, type: 3}
+    - target: {fileID: 4476482514763244519, guid: e379d209bf1990c418797ee25bad720a, type: 3}
+      propertyPath: Potions.Array.data[3]
+      value: 
+      objectReference: {fileID: 6406563233638299365, guid: 58ce79c51f7f0cd40b0e54347e3c035d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e379d209bf1990c418797ee25bad720a, type: 3}
 --- !u!1 &1676994527
@@ -556,6 +576,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2984999642462025868, guid: 97c2b476cdb414945b7f65a06221dd97, type: 3}
+      propertyPath: Potions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984999642462025868, guid: 97c2b476cdb414945b7f65a06221dd97, type: 3}
+      propertyPath: Potions.Array.data[0]
+      value: 
+      objectReference: {fileID: 3714093928143357205, guid: 873fe0a6ad7bc744ea6d5855ac33533e, type: 3}
     - target: {fileID: 2984999642462025869, guid: 97c2b476cdb414945b7f65a06221dd97, type: 3}
       propertyPath: m_RootOrder
       value: 5
