@@ -125,7 +125,7 @@ MonoBehaviour:
   isPoison: 0
   audioSource: {fileID: 5709158772339589957}
   clips:
-  - {fileID: 8300000, guid: e9756bb56ace3aa4295cdecf7572cbe5, type: 3}
+  - {fileID: 8300000, guid: 4b0adc3bf12a1b4419e6defe19564263, type: 3}
   volume: 0.5
 --- !u!222 &6072911407100980925
 CanvasRenderer:
