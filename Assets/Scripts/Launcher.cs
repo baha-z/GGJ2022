@@ -6,16 +6,20 @@ public class Launcher : MonoBehaviour
 {
     Rigidbody2D rb2d;
     // Game objects to generate
-    public GameObject sanityPotion;
+    public GameObject[] Potions;
     // Time controller
-    float time;
+    float     time;
     // Interval between every generation on seconds
     public float interval;
     // Value to generate force
     public float force = 30000f;
 
+    GameObject pota;
+
     void Start () {
-        Rigidbody2D potionRb2d = sanityPotion.GetComponent<Rigidbody2D>();
+  
+        pota = Potions[Random.Range(0, Potions.Length)];
+        Rigidbody2D potionRb2d = pota.GetComponent<Rigidbody2D>();
         Vector2 impulseY = new Vector2(0, -force);
         potionRb2d.AddForce(impulseY);
     }
@@ -32,6 +36,6 @@ public class Launcher : MonoBehaviour
 
     // Shoot potions
     void launch() {
-        Instantiate(sanityPotion, this.transform.position, Quaternion.identity);
+         Instantiate(pota, this.transform.position, Quaternion.identity);
     }
 }
