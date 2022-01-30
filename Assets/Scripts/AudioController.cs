@@ -46,19 +46,18 @@ public class AudioController : MonoBehaviour
     public void Play(string name)
     {
         Sound snd = Array.Find(sounds, sound => sound.name == name);
-        Sound[] dsbl = Array.FindAll(sounds, sound => 
-            sound.name != name
-        );
-
         try
         {
-            foreach(Sound sound in dsbl) sound.source.mute = true;
+            muteOtherSounds(name);
             snd.source.volume = musicVolume;
             snd.source.mute = false;
-        } catch
-        {
-            Debug.LogWarning("Sound not found");
-        }
+        } catch Debug.LogWarning("Sound not found");
+    }
+
+    public void muteOtherSounds(string name)
+    {
+        Sound[] dsbl = Array.FindAll(sounds, sound => sound.name != name);
+        foreach(Sound sound in dsbl) sound.source.mute = true;
     }
 
     public void UpdateTrack()
