@@ -7,6 +7,9 @@ public class LevelController : MonoBehaviour
     // Script Objects
     PlayerScore scoreScript;
     Spawner spawner;
+    Potions sanityScript;
+    Potions crazyScript;
+    Launcher launcherScript;
     // Current time
     float timer;
     // Current score
@@ -20,6 +23,23 @@ public class LevelController : MonoBehaviour
     public float pointFlag = 100;
     // Name of generator object
     public string generatorName = "Generator";
+    public string launcherName = "Launcher";
+
+    void Start() {
+        // Inntiliaze Score script
+        Camera camera = Camera.main;
+        scoreScript = camera.GetComponent<PlayerScore>();
+
+        // Innitialize generator potions
+        GameObject generator = GameObject.Find(generatorName);
+        spawner = generator.GetComponent<Spawner>();
+        sanityScript = spawner.sanityPotion.GetComponent<Potions>();
+        crazyScript = spawner.crazyPotion.GetComponent<Potions>();
+
+        // Innitialize launcher 
+        GameObject launcher = GameObject.Find(launcherName);
+        launcherScript = launcher.GetComponent<Launcher>();
+    }
 
     // Update is called once per frame
     void Update() {
@@ -36,30 +56,20 @@ public class LevelController : MonoBehaviour
 
     // Method to get score from main camera script
     void getPlayerScore() {
-        Camera camera = Camera.main;
-
-        scoreScript = camera.GetComponent<PlayerScore>();
-
         currentScore = scoreScript.score;
     }
 
     // Method to overwrite to generator script and potion scripts the new values
     void handlerLevelIncrease () {
-        GameObject generator = GameObject.Find(generatorName);
-
-        spawner = generator.GetComponent<Spawner>();
-
-        Potions sanityScript = spawner.sanityPotion.GetComponent<Potions>();
-        Potions crazyScript = spawner.crazyPotion.GetComponent<Potions>();
-
-        if(spawner.interval > .5f){
-            spawner.interval -= - .1f;
+        if(launcherScript.interval > .5f){
+            launcherScript.interval -= .1f;
         }
-
+        if(spawner.interval > .5f){
+            spawner.interval -= .1f;
+        }
         if(sanityScript.time > .3f){
             sanityScript.time -= .2f;
         }
-
         crazyScript.time += .2f;
     }
 }
