@@ -12,7 +12,7 @@ public class Launcher : MonoBehaviour
     // Interval between every generation on seconds
     public float interval;
     // Value to generate force
-    float force = 10000f;
+    float force = 30000f;
 
     void Start () {
         // Load force to init launcher movement
@@ -22,13 +22,11 @@ public class Launcher : MonoBehaviour
 
         // Try to prepare potion with fall velocity and force
         Rigidbody2D potionRb2d = sanityPotion.GetComponent<Rigidbody2D>();
-        potionRb2d.velocity = new Vector2(0, -force);
         Vector2 impulseY = new Vector2(0, -force);
         potionRb2d.AddForce(impulseY);
     }
 
     void Update() {
-        HandleMove();
         time += Time.deltaTime;
 
         if(time >= interval) {
@@ -36,26 +34,6 @@ public class Launcher : MonoBehaviour
 
             time = 0;
         }
-    }
-
-    // Handle horizontal move
-    void HandleMove() {
-        Camera camera = Camera.main;
-        float camHeight = camera.orthographicSize / 2f;
-        float camWidth = camera.aspect * camHeight - 50f;
-
-        if(this.transform.position.x > 0){
-            if(this.transform.position.x > camWidth){
-                Vector2 impulse = new Vector2(-1000f, 0);
-                rb2d.AddForce(impulse);    
-            }
-        }else {
-            if(this.transform.position.x < -camWidth){
-                Vector2 impulse = new Vector2(1000f, 0);
-                rb2d.AddForce(impulse);        
-            }
-        }
-        
     }
 
     // Shoot potions
