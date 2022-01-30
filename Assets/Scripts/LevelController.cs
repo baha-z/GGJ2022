@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
+    // Script Objects
     PlayerScore scoreScript;
     Spawner spawner;
+    // Current time
     float timer;
+    // Current score
     float currentScore = 0;
+    // Last score saved
     float lastScore = 0;
 
+    // Time in seconds to trigger every change
     public float timeFlag = 60;
+    // Quantity of points to trigger every change
     public float pointFlag = 100;
+    // Name of generator object
     public string generatorName = "Generator";
 
     // Update is called once per frame
@@ -27,6 +34,7 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    // Method to get score from main camera script
     void getPlayerScore() {
         Camera camera = Camera.main;
 
@@ -35,6 +43,7 @@ public class LevelController : MonoBehaviour
         currentScore = scoreScript.score;
     }
 
+    // Method to overwrite to generator script and potion scripts the new values
     void handlerLevelIncrease () {
         GameObject generator = GameObject.Find(generatorName);
 
