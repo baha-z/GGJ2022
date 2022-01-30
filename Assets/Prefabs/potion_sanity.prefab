@@ -101,7 +101,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 2939224188783214814}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fc8714e58ad4142a8af0a7ff62e2d410, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7119a44800ebe47af8b0b7238595ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5
+  time: 3.6000009
   points: 10
   isPoison: 0
   audioSource: {fileID: 6087219404336531086}
