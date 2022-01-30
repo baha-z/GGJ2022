@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
     // Game objects to generate
-    public GameObject sanityPotion;
-    public GameObject crazyPotion;
-    // Time controller
+    public GameObject[] Potions ;
+     // Time controller
     float time;
     // Interval between every generation on seconds
     public float interval;
@@ -76,11 +74,11 @@ public class Spawner : MonoBehaviour
         }
 
         // Type of potion handler
-        bool isSanityPotion = Random.value > .5;
-        if(isSanityPotion){
-            Instantiate(sanityPotion, position, Quaternion.identity);
-        } else {
-            Instantiate(crazyPotion, position, Quaternion.identity);
-        }
+        Debug.Log("hola", Potions[2]);
+        GameObject potion = Potions[Random.Range(0, Potions.Length-1)];
+        Debug.Log("hola", potion);
+
+     //   Instantiate(potion, position, Quaternion.identity);
+
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Potions : MonoBehaviour
+public class Potions : MonoBehaviour 
 {
 
     public float time;
@@ -14,6 +14,7 @@ public class Potions : MonoBehaviour
     public AudioClip[] clips;
     public float volume = 0.5f;
     private int index;
+
 
     void Start()
     {

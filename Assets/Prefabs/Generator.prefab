@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4476482514763244518}
   - component: {fileID: 4476482514763244519}
+  - component: {fileID: 830275823490746216}
   m_Layer: 0
   m_Name: Generator
   m_TagString: generator
@@ -38,7 +39,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4476482514763244512}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fd3fd7ce29bc9b47a8daa38fef3658d, type: 3}
   m_Name: 
@@ -47,5 +48,23 @@ MonoBehaviour:
   crazyPotion: {fileID: 2335059844689782089, guid: 58ce79c51f7f0cd40b0e54347e3c035d, type: 3}
   interval: 1
   range: 500
-  border: 100
   creationRange: 4
+  playerObjectName: Doctor
+--- !u!114 &830275823490746216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4476482514763244512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd3fd7ce29bc9b47a8daa38fef3658d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sanityPotion: {fileID: 0}
+  crazyPotion: {fileID: 0}
+  interval: 0
+  range: 0
+  creationRange: 1
+  playerObjectName: Doctor
