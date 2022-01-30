@@ -13,12 +13,7 @@ public class AudioController : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null) instance = this;
-        else {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
+       
 
         foreach (Sound sound in sounds)
         {
@@ -35,29 +30,35 @@ public class AudioController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (AudioController.instance == null) instance = this;
+        else
+        {
+            Debug.Log("delete");
+            Destroy(instance);
+            return;
+        }
         doctorMovement = gameObject.GetComponent<PlayerScore>().Doctor.GetComponent<DoctorMovement>();
         Play("Normal");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void EndMusic()
     {
-        foreach(Sound sound in sounds) sound.source.volume = 0.0f;
+        foreach(Sound sound in sounds) sound.source.mute = true; 
     }
 
     public void Play(string name)
     {
         Sound snd = Array.Find(sounds, sound => sound.name == name);
-        Sound[] dsbl = Array.FindAll(sounds, sound => sound.name != name);
+        Sound[] dsbl = Array.FindAll(sounds, sound => 
+            sound.name != name
+          );
+        Debug.Log(dsbl); 
+
         try
         {
-            foreach(Sound sound in dsbl) sound.source.volume = 0.0f;
+            foreach(Sound sound in dsbl) sound.source.mute = true;
             snd.source.volume = musicVolume;
+            snd.source.mute = false;
         } catch
         {
             Debug.LogWarning("Sound not found");
