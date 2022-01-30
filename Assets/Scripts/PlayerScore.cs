@@ -41,16 +41,19 @@ public class PlayerScore : MonoBehaviour
         if (Time.time > DissapearingTime) poinstText.text = "";
     }
 
-    public void AddPoints(int points, bool isRed) {
+    public void AddPoints(int points, bool isRed, bool isBlack) {
+        if (isBlack && score >= points) points = 0;
         if(isRed) penaltyTimer = 0;
         score = score + points;
-        showScore(points);
+        showScore(points, isBlack);
        
     }
 
-    public void LoseLife()
+    public void LoseLife(bool isBlack = false)
     {
         life--;
+        if (isBlack && life > 0) life--;
+
         UpdateScoreMark();
 
         if (life < 1)
@@ -84,7 +87,7 @@ public class PlayerScore : MonoBehaviour
         }
     }
 
-    public void showScore(int points)
+    public void showScore(int points, bool isBlack = false)
     {
    
         if (points < 1)
@@ -92,7 +95,7 @@ public class PlayerScore : MonoBehaviour
             //lose life 
             poinstText.color = Color.red;
             poinstText.text = "ouch";
-            LoseLife();
+            LoseLife(isBlack);
 
         }
         else
