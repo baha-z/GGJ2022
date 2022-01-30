@@ -164,10 +164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 678521550}
-  higScoreText: {fileID: 1119928667}
   poinstText: {fileID: 1292046262}
   life: 4
   Doctor: {fileID: 822176139}
+  score: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -746,6 +746,7 @@ GameObject:
   - component: {fileID: 1961995965}
   - component: {fileID: 1961995964}
   - component: {fileID: 1961995963}
+  - component: {fileID: 1961995966}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -801,6 +802,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1961995966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961995962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57acc28a03e0b7b4c8a772fe4accc874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeFlag: 30
+  pointFlag: 10
+  generatorName: Generator
 --- !u!1001 &2071065228378351252
 PrefabInstance:
   m_ObjectHideFlags: 0
