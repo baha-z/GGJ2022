@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7119a44800ebe47af8b0b7238595ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 4.6000004
-  points: 10
+  time: 3
+  points: 20
   isPoison: 0
   audioSource: {fileID: 5709158772339589957}
   clips:
