@@ -21,13 +21,26 @@ public class DoctorMovement : MonoBehaviour
     {
         if (Animator.GetBool("muting")) Animator.SetBool("monster", true);
         else Animator.SetBool("muting", true);
-        Debug.Log("muting: " + Animator.GetBool("muting") + " monster: " +  Animator.GetBool("monster"));
     }
 
     public void TransformRegression()
     {
         if (Animator.GetBool("monster")) Animator.SetBool("monster", false);
         else Animator.SetBool("muting", false);
-        Debug.Log("muting: " + Animator.GetBool("muting") + " monster: " +  Animator.GetBool("monster"));
+    }
+
+    public bool IsMonster()
+    {
+        return Animator.GetBool("monster") && Animator.GetBool("muting");
+    }
+
+    public bool IsMuting()
+    {
+        return !Animator.GetBool("monster") && Animator.GetBool("muting");
+    }
+
+    public bool IsNormal()
+    {
+        return !Animator.GetBool("monster") && !Animator.GetBool("muting");
     }
 }

@@ -53,11 +53,13 @@ public class PlayerScore : MonoBehaviour
         {
             PlayerPrefs.SetInt("score", score);
             saveHighScore();
+            GetComponent<AudioController>().EndMusic();
             SceneManager.LoadScene("GameOver");
 
         } else if (life < 3)
         {
             Doctor.GetComponent<DoctorMovement>().TransformAdvance();
+            GetComponent<AudioController>().UpdateTrack();
         }
     }
 
@@ -70,7 +72,11 @@ public class PlayerScore : MonoBehaviour
 
             UpdateScoreMark();
 
-            if (life > 0) Doctor.GetComponent<DoctorMovement>().TransformRegression();
+            if (life > 0)
+            {
+                Doctor.GetComponent<DoctorMovement>().TransformRegression();
+                GetComponent<AudioController>().UpdateTrack();
+            }
         }
     }
 
