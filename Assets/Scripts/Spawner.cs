@@ -32,8 +32,8 @@ public class Spawner : MonoBehaviour
 
         // Camera reference position
         Camera camera = Camera.main;
-        camHeight = camera.orthographicSize / 2f;
-        camWidth = camera.aspect * camHeight;
+        float camHeight = camera.orthographicSize / 2f;
+        float camWidth = camera.aspect * camHeight;
     }
 
     void Update()
