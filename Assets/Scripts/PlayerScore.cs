@@ -16,7 +16,7 @@ public class PlayerScore : MonoBehaviour
     private float TextTimer = 1f;
     private float DissapearingTime;
 
-    int score ;
+    public int score ;
     int highScore;
 
     private void Start()
