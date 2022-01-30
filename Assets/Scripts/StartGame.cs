@@ -10,4 +10,9 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }

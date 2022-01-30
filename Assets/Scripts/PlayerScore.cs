@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class PlayerScore : MonoBehaviour
 {
     public static PlayerScore instance;
-    public Text scoreText;
     public Text poinstText;
     public int life = 4;
     public GameObject Doctor;
@@ -22,7 +21,6 @@ public class PlayerScore : MonoBehaviour
     private void Start()
     {
         highScore = PlayerPrefs.GetInt("highScore");
-        scoreText.text = score.ToString() + "points";
     }
     void Awake()
     {
@@ -30,8 +28,6 @@ public class PlayerScore : MonoBehaviour
     }
     private void Update()
     {
-        scoreText.text = score.ToString() + "points";
-
         if (Time.time > DissapearingTime) poinstText.text = "";
     }
 

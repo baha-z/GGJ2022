@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 3aea902ab4fa7244ea287ee50b839027
+guid: dddb491315e905740b7ea61b3a787ce2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3570245533940127877
-    second: sheet_3_0
+      213: -5387957091168945684
+    second: sheet_GO_0
   - first:
-      213: -7235616177586388796
-    second: sheet_3_1
+      213: -6389908690450380530
+    second: sheet_GO_1
   - first:
-      213: 4558709015978252085
-    second: sheet_3_2
+      213: 5566278973385102450
+    second: sheet_GO_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,7 +55,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sheet_3_0
+      name: sheet_GO_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 844
+        width: 1300
         height: 871
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -114,19 +114,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5881d6ba56f0c8130800000000000000
-      internalID: 3570245533940127877
+      spriteID: ce9f3db72912a35b0800000000000000
+      internalID: -5387957091168945684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_3_1
+      name: sheet_GO_1
       rect:
         serializedVersion: 2
-        x: 843
+        x: 1300
         y: 0
-        width: 846
+        width: 1300
         height: 871
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -135,19 +135,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0c4e32c6de59b90800000000000000
-      internalID: -7235616177586388796
+      spriteID: e090686b6eb7257a0800000000000000
+      internalID: -6389908690450380530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_3_2
+      name: sheet_GO_2
       rect:
         serializedVersion: 2
-        x: 1681
+        x: 2600
         y: 0
-        width: 848
+        width: 1300
         height: 871
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53711cb62b9c34f30800000000000000
-      internalID: 4558709015978252085
+      spriteID: 27458512c356f3d40800000000000000
+      internalID: 5566278973385102450
       vertices: []
       indices: 
       edges: []
