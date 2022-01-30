@@ -100,6 +100,7 @@ public class PlayerScore : MonoBehaviour
             //sum score
             poinstText.color = Color.yellow;
             poinstText.text = "+" + points.ToString() + "pts";
+
             RecoverLife();
         }
         DissapearingTime = Time.time + TextTimer;
