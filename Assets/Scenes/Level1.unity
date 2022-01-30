@@ -814,8 +814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57acc28a03e0b7b4c8a772fe4accc874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeFlag: 30
-  pointFlag: 10
+  timeFlag: 60
+  pointFlag: 100
   generatorName: Generator
 --- !u!1001 &2071065228378351252
 PrefabInstance:

@@ -10,8 +10,8 @@ public class LevelController : MonoBehaviour
     float currentScore = 0;
     float lastScore = 0;
 
-    public float timeFlag = 30;
-    public float pointFlag = 10;
+    public float timeFlag = 60;
+    public float pointFlag = 100;
     public string generatorName = "Generator";
 
     // Update is called once per frame
@@ -47,7 +47,7 @@ public class LevelController : MonoBehaviour
             spawner.interval -= - .1f;
         }
 
-        if(sanityScript.time > .5f){
+        if(sanityScript.time > .3f){
             sanityScript.time -= .2f;
         }
 
