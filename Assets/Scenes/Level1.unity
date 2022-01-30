@@ -167,6 +167,7 @@ MonoBehaviour:
   life: 4
   Doctor: {fileID: 822176139}
   score: 0
+  penaltyRange: 10
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

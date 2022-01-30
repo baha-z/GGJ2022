@@ -16,6 +16,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2905034561644651161, guid: 035ff230367775e44a368118c7740790, type: 3}
+      propertyPath: isRed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905034561644651161, guid: 035ff230367775e44a368118c7740790, type: 3}
       propertyPath: points
       value: 20
       objectReference: {fileID: 0}

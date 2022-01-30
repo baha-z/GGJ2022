@@ -100,9 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 3.6000001
   points: 0
-  isPoison: 1
+  isPoison: 0
+  isRed: 0
   audioSource: {fileID: -514534589562564565}
-  clip: {fileID: 8300000, guid: a9a35944cfce6e74c9436dee869b9a7a, type: 3}
   clips:
   - {fileID: 8300000, guid: f7154cb858e22f541b85bd0504fa8d2e, type: 3}
   - {fileID: 8300000, guid: 5ef2de9caf062a2419c61252275d6f61, type: 3}

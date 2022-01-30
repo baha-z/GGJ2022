@@ -9,7 +9,8 @@ public class Potions : MonoBehaviour
 
     public float time;
     public int points;
-    public bool isPoison;
+    public bool isPoison = false;
+    public bool isRed = false;
     public AudioSource audioSource;
     public AudioClip[] clips;
     public float volume = 0.5f;
@@ -38,7 +39,10 @@ public class Potions : MonoBehaviour
     IEnumerator myWaitCoroutine()
     {
         yield return new WaitForSeconds(0.5f);
-        PlayerScore.instance.AddPoints(points);
+        if(isPoison){
+            points = -20;
+        }
+        PlayerScore.instance.AddPoints(points, isRed);
         Destroy(gameObject);
 
     }
