@@ -15,10 +15,12 @@ public class Launcher : MonoBehaviour
     float force = 10000f;
 
     void Start () {
+        // Load force to init launcher movement
         rb2d = GetComponent<Rigidbody2D>();
         Vector2 impulse = new Vector2(force, 0);
         rb2d.AddForce(impulse);
 
+        // Try to prepare potion with fall velocity and force
         Rigidbody2D potionRb2d = sanityPotion.GetComponent<Rigidbody2D>();
         potionRb2d.velocity = new Vector2(0, -force);
         Vector2 impulseY = new Vector2(0, -force);
@@ -36,6 +38,7 @@ public class Launcher : MonoBehaviour
         }
     }
 
+    // Handle horizontal move
     void HandleMove() {
         Camera camera = Camera.main;
         float camHeight = camera.orthographicSize / 2f;
@@ -55,6 +58,7 @@ public class Launcher : MonoBehaviour
         
     }
 
+    // Shoot potions
     void launch() {
         Instantiate(sanityPotion, this.transform.position, Quaternion.identity);
     }
