@@ -12,7 +12,7 @@ public class EndGame : MonoBehaviour
     private void Start()
     {
         higScoreText.text = "highscore: " + PlayerPrefs.GetInt("highScore").ToString();
-        scoreText.text = "score: " + PlayerPrefs.GetString("score").ToString();
+        scoreText.text = "score: " + PlayerPrefs.GetInt("score").ToString();
         Debug.Log(scoreText.text);
     }
 
