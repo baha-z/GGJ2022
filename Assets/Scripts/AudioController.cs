@@ -51,7 +51,10 @@ public class AudioController : MonoBehaviour
             muteOtherSounds(name);
             snd.source.volume = musicVolume;
             snd.source.mute = false;
-        } catch Debug.LogWarning("Sound not found");
+        } catch
+        {
+            Debug.LogWarning("Sound not found");
+        }
     }
 
     public void muteOtherSounds(string name)
