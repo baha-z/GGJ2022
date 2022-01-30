@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Potions : MonoBehaviour
 {
 
-    public int time;
+    public float time;
     public int points;
     public bool isPoison;
     public AudioSource audioSource;

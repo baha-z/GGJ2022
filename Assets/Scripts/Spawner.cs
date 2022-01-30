@@ -17,8 +17,25 @@ public class Spawner : MonoBehaviour
     public float creationRange = 1;
     // GameObject to avoid
     public string playerObjectName = "Doctor";
+    // Game objects position into game
+    float doctorX;
+    float doctorY;
+    float camHeight;
+    float camWidth;
 
-    // Update is called once per frame
+    void Start () {
+        // Doctor sprite reference position
+        GameObject doctor = GameObject.Find(playerObjectName);
+        Collider2D doctorCollider = doctor.GetComponent<Collider2D>();
+        doctorX = doctorCollider.bounds.extents.x;
+        doctorY = doctorCollider.bounds.extents.y;
+
+        // Camera reference position
+        Camera camera = Camera.main;
+        camHeight = camera.orthographicSize / 2f;
+        camWidth = camera.aspect * camHeight;
+    }
+
     void Update()
     {
         time += Time.deltaTime;
@@ -32,36 +49,34 @@ public class Spawner : MonoBehaviour
         
     }
 
-    // Method to generate random object arround father position 
-    void generate() {
+    // Define inntial position
+    Vector3 getRandomPosition(){
         float randomX = Random.Range(-range, range);
         float randomY = Random.Range(-range/2, range/2);
-        bool isSanityPotion = Random.value > .5;
-        Vector3 position = this.transform.position;
 
+        Vector3 position = this.transform.position;
         position.x = position.x + randomX;
         position.y = position.y + randomY;
 
-        // Doctor sprite reference position
-        GameObject doctor = GameObject.Find(playerObjectName);
-        Collider2D doctorCollider = doctor.GetComponent<Collider2D>();
-        float doctorX = doctorCollider.bounds.extents.x;
-        float doctorY = doctorCollider.bounds.extents.y;
+        return position;
+    }
 
+    // Method to generate random object arround father position 
+    void generate() {
+        Vector3 position = getRandomPosition();
+
+        // Recursive validator with cam limits and doctor script position
         if((position.x <= doctorX && position.x >= -doctorX) && (position.y <= doctorY && position.y >= -doctorY)){
             generate();
             return;
         }
-        
-        Camera camera = Camera.main;
-        float halfHeight = camera.orthographicSize / 2f;
-        float halfWidth = camera.aspect * halfHeight;
-
-        if(position.x >= halfWidth || position.y >= halfHeight ){
+        if(position.x >= camWidth || position.y >= camHeight ){
             generate();
             return;
         }
 
+        // Type of potion handler
+        bool isSanityPotion = Random.value > .5;
         if(isSanityPotion){
             Instantiate(sanityPotion, position, Quaternion.identity);
         } else {
