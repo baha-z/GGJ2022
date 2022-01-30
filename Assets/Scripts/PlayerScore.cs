@@ -20,6 +20,7 @@ public class PlayerScore : MonoBehaviour
     int highScore;
     float penaltyTimer = 0;
     public float penaltyRange = 10;
+
     private void Start()
     {
         highScore = PlayerPrefs.GetInt("highScore");
@@ -51,8 +52,6 @@ public class PlayerScore : MonoBehaviour
     {
         life--;
         UpdateScoreMark();
-
-        // Debug.Log("losing a life!" + life);
 
         if (life < 1)
         {
@@ -118,7 +117,6 @@ public class PlayerScore : MonoBehaviour
 
         if (highScore < score)
         {
-            // Debug.Log("new highScore:  " + score);
             PlayerPrefs.SetInt("highScore", score);
         }
     }
