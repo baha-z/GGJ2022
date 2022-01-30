@@ -123,6 +123,7 @@ MonoBehaviour:
   time: 3.6000009
   points: 10
   isPoison: 0
+  isRed: 1
   audioSource: {fileID: 6087219404336531086}
   clips:
   - {fileID: 8300000, guid: 4b0adc3bf12a1b4419e6defe19564263, type: 3}

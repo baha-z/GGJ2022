@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -17,7 +18,8 @@ public class PlayerScore : MonoBehaviour
 
     public int score ;
     int highScore;
-
+    float penaltyTimer = 0;
+    public float penaltyRange = 10;
     private void Start()
     {
         highScore = PlayerPrefs.GetInt("highScore");
@@ -28,11 +30,18 @@ public class PlayerScore : MonoBehaviour
     }
     private void Update()
     {
+        penaltyTimer += Time.deltaTime;
+
+        if(penaltyTimer >= penaltyRange) {
+            LoseLife();
+            penaltyTimer = 0;
+        }
+
         if (Time.time > DissapearingTime) poinstText.text = "";
     }
 
-    public void AddPoints(int points)
-    {
+    public void AddPoints(int points, bool isRed) {
+        if(isRed) penaltyTimer = 0;
         score = score + points;
         showScore(points);
        
